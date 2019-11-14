@@ -4,7 +4,7 @@ import DOMElement from "./src/dom-element";
 
 console.log("test");
 
-// TODO: MAKE FUNCTIONS PRIVATE
+// TODO: MAKE FUNCTIONS PRIVATE USING WEAKMAP
 class MyValidator {
     constructor() { }
 
@@ -30,7 +30,7 @@ class MyValidator {
                     const fieldDomEl = new DOMElement(field);
                     if (validator && !validator.validate()) {
                         const errMessage = this._getErrorMessage(field, name);
-                        // TODO: use prototype pattern
+                        // TODO: use prototype pattern // DONE
                         errDomEle.setInnerText(errMessage ? errMessage : validator.message);
                         errDomEle.setStyle(Style.errClass);
                         fieldDomEl.setStyle(Style.errFieldClass);
@@ -38,7 +38,7 @@ class MyValidator {
                         isValid = false;
                         break;
                     } else {
-                        // TODO: use prototype pattern
+                        // TODO: use prototype pattern // DONE
                         errDomEle.setInnerText('');
 						errDomEle.setStyle({});
 						fieldDomEl.setStyle({});
