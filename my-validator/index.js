@@ -40,8 +40,8 @@ class MyValidator {
                     } else {
                         // TODO: use prototype pattern // DONE
                         errDomEle.setInnerText('');
-						errDomEle.setStyle({});
-						fieldDomEl.setStyle({});
+			errDomEle.setStyle({});
+			fieldDomEl.setStyle({});
                     }
                 }
             }
